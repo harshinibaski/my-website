@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cloud Computing</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>WELCOME TO CLOUD COMPUTING</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#cloud computing">Cloud computing</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="what-is-cloud">
+        <h2>Cloud Computing</h2>
+        <p>Cloud computing is the delivery of various computing services, such as servers, storage, databases, networking, software, analytics, and intelligence, over the internet ("the cloud").</p>
+        <img src="images/cloud.webp" alt="Cloud Computing">
+    </section>
+
+    <section id="quiz">
+        <h2>What is a key benefit of Cloud Computing?</h2>
+        <form>
+            <label>
+                <input type="radio" name="quiz" value="a"> Scalability
+            </label><br>
+            <label>
+                <input type="radio" name="quiz" value="b"> Inflexibility
+            </label><br>
+            <label>
+                <input type="radio" name="quiz" value="c"> High Cost
+            </label><br>
+            <label>
+                <input type="radio" name="quiz" value="d"> Limited Reach
+            </label><br>
+        </form>
+        <button onclick="checkAnswer()">Submit</button> 
+        <p id="result"></p>
+    </section>
+
+    <section id="cloud-services">
+        <h2>Types of Cloud Services</h2>
+
+        <button class="collapsible" onclick="toggleContent(this)">Infrastructure as a Service (IaaS)</button>
+        <div class="content">
+            <p>Infrastructure as a Service (IaaS) provides virtualized computing resources like virtual machines, storage, and networking to users, allowing them to manage infrastructure as needed.</p>
+        </div>
+
+        <button class="collapsible" onclick="toggleContent(this)">Platform as a Service (PaaS)</button>
+        <div class="content">
+            <p>Platform as a Service (PaaS) offers a complete development environment including hardware, operating systems, and software tools for developers to build, test, and deploy applications without managing the underlying infrastructure.</p>
+        </div>
+
+        <button class="collapsible" onclick="toggleContent(this)">Software as a Service (SaaS)</button>
+        <div class="content">
+            <p>Software as a Service (SaaS) provides software applications via the internet, typically on a subscription basis, allowing users to access and use the software without managing hardware or infrastructure.</p>
+        </div>
+    </section>
+
+    <section id="video">
+        <h2>Cloud Computing Video Overview</h2>
+        <video width="640" height="360" controls>
+            <source src="cloud_overview.mp4" type="video/mp4">
+            <source src="cloud_overview.webm" type="video/webm">
+            Your browser does not support HTML5 video. Please update your browser.
+        </video>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, <button onclick="openContactForm()">click here</button> to contact us.</p>
+    </section>
+
+    <div id="contact-form" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeContactForm()">&times;</span>
+            <h2>Contact Form</h2>
+            <p>Please fill out the form below:</p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required><br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Cloud Computing. All rights reserved.</p>
+    </footer>
+</body>
+</html>
